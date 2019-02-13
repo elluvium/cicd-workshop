@@ -126,7 +126,8 @@ Since you're finished all steps in prerequisites part, we're ready to start with
 2. Try to change default pipeline and add some new steps
 
 
-
+## Cleanup
+Don't forget to delete created resources in Azure by deleting all resource groups
 
 
 ## Useful links

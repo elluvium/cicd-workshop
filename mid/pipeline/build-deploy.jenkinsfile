@@ -1,0 +1,21 @@
+def tomcat_home = "/opt/tomcat"
+def git_repo = "https://github.com/elluvium/webapp.git"
+
+node('master'){
+   stage ('Pull'){
+       cleanWs()
+       git "${git_repo}"
+   }
+
+   stage ('Build application'){
+       withMaven(maven: 'maven') {
+         sh "mvn clean package"
+       }
+   }
+   
+   ws("${war_home}"){
+       stage ('Deploy to Azure WebApp'){
+       azureWebAppPublish appName: 'tomcat-app', azureCredentialsId: 'azure_service_principal', filePath: 'WebApp.war', publishType: 'file', resourceGroup: 'cicd-workshop-rg', slotName: '', sourceDirectory: 'target', targetDirectory: '${tomcat_home}/webapps'
+   }   
+   }
+}
