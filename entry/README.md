@@ -6,7 +6,7 @@ This task is going to leverage the functionality of Azure DevOps service.
 2. Sign in to you Azure account
 3. Make sure that you can access Azure portal - portal.azure.com
 4. Using Azure Portal create new DevOps organization and project
-[[https://github.com/elluvium/cicd-workshop/entry/master/img/create-azure-devops.PNG|alt=create-devops]]
+[[https://github.com/elluvium/cicd-workshop/blob/master/entry/img/create-azure-devops.PNG|alt=create-devops]]
 
 
 ## Build and test Go projects with Azure DevOps pipelines
