@@ -123,6 +123,7 @@ Since you're finished all steps in prerequisites part, we're ready to start with
 
 ## Extra task
 1. Make change in the source code with intentional mistake, commit and see what will happen.
+2. Try to change default pipeline and add some new steps
 
 
 
